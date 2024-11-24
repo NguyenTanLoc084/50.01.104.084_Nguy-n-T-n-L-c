@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thành Viên CLB Yêu Nhạc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff; /* Màu nền nhạt */
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50; /* Màu tiêu đề đậm */
+        }
+        table {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            background-color: #ffffff; /* Nền bảng trắng */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        td:first-child {
+            font-weight: bold;
+            background-color: #f7f9fc; /* Màu nền nhẹ cho tiêu đề */
+        }
+        input[type="text"], input[type="password"], select, textarea, input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .buttons input {
+            margin: 5px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #3498db; /* Màu nút */
+            color: #fff; /* Màu chữ nút */
+            font-weight: bold;
+        }
+        .buttons input:hover {
+            background-color: #2980b9; /* Màu nút khi hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Đăng Ký Thành Viên CLB Yêu Nhạc</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="ho_ten" required></td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" name="ten_dang_nhap" required></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="mat_khau" required></td>
+            </tr>
+            <tr>
+                <td>Gõ lại mật khẩu</td>
+                <td><input type="password" name="go_lai_mat_khau" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <label><input type="radio" name="gioi_tinh" value="Nam" required> Nam</label>
+                    <label><input type="radio" name="gioi_tinh" value="Nữ"> Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Ngôn ngữ</td>
+                <td>
+                    <label><input type="checkbox" name="ngoai_ngu[]" value="Anh văn"> Anh văn</label>
+                    <label><input type="checkbox" name="ngoai_ngu[]" value="Pháp văn"> Pháp văn</label>
+                    <label><input type="checkbox" name="ngoai_ngu[]" value="Hoa văn"> Hoa văn</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select name="nghe_nghiep">
+                        <option value="">--- Bạn làm nghề gì ---</option>
+                        <option value="Học sinh">Học sinh</option>
+                        <option value="Sinh viên">Sinh viên</option>
+                        <option value="Nhân viên">Nhân viên</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hình</td>
+                <td><input type="file" name="hinh"></td>
+            </tr>
+            <tr>
+                <td>Sở thích</td>
+                <td><textarea name="so_thich" rows="3"></textarea></td>
+            </tr>
+        </table>
+        <div class="buttons">
+            <input type="submit" value="Đăng ký">
+            <input type="reset" value="Làm lại">
+        </div>
+    </form>
+</body>
+</html>
